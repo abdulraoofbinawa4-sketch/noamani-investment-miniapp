@@ -1,0 +1,395 @@
+:root {
+  --bg: #020c08;
+  --panel: #071d13;
+  --panel2: #0b291b;
+  --gold: #e9bb4c;
+  --gold2: #ffe69a;
+  --green: #00b86b;
+  --text: #f6f4e9;
+  --muted: #a5b8aa;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.app {
+  width: 100%;
+  max-width: 520px;
+  margin: auto;
+  padding: 16px;
+  overflow: hidden;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  color: var(--gold2);
+  font-family: Georgia, serif;
+  font-size: 35px;
+  font-weight: bold;
+  box-shadow: 0 0 18px #d6a63855;
+}
+
+.brand h2 {
+  font-size: 17px;
+  color: var(--gold2);
+  letter-spacing: 2px;
+}
+
+.brand span {
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--muted);
+}
+
+.language {
+  background: var(--panel2);
+  color: var(--gold2);
+  border: 1px solid var(--gold);
+  border-radius: 10px;
+  padding: 9px 14px;
+}
+
+.welcome {
+  position: relative;
+  min-height: 190px;
+  padding: 23px;
+  border: 1px solid var(--gold);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 85% 10%, #087a42 0, transparent 38%),
+    linear-gradient(135deg, #092c1b, #010b07);
+  box-shadow: 0 0 25px #d5a12a25;
+  overflow: hidden;
+}
+
+.welcome-content {
+  position: relative;
+  z-index: 2;
+}
+
+.crown {
+  font-size: 28px;
+  color: var(--gold);
+}
+
+.welcome h1 {
+  color: var(--gold2);
+  margin: 10px 0;
+  font-size: 25px;
+}
+
+.welcome p {
+  color: #d4e4d8;
+  font-size: 13px;
+  max-width: 230px;
+  line-height: 1.8;
+}
+
+.welcome-tag {
+  margin-top: 19px;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.welcome-symbol {
+  position: absolute;
+  right: -5px;
+  bottom: -40px;
+  color: #d7a83a16;
+  font-size: 180px;
+  font-family: Georgia, serif;
+  font-weight: bold;
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 24px 2px 13px;
+}
+
+.section-title h3 {
+  color: var(--gold2);
+  font-size: 16px;
+}
+
+.demo {
+  font-size: 9px;
+  color: var(--gold);
+  border: 1px solid #b68d3b;
+  border-radius: 20px;
+  padding: 6px 9px;
+}
+
+.wallets {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.wallet-card {
+  background: linear-gradient(145deg, #0c3020, #03140c);
+  border: 1px solid #168d59;
+  border-radius: 16px;
+  padding: 16px 10px;
+  text-align: center;
+}
+
+.wallet-icon {
+  font-size: 30px;
+  color: var(--gold);
+}
+
+.wallet-card p {
+  color: #d4e2d7;
+  font-size: 13px;
+  margin: 9px 0;
+}
+
+.wallet-card h2 {
+  color: var(--gold2);
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.wallet-card small {
+  font-size: 9px;
+  color: var(--muted);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+  margin-top: 13px;
+}
+
+.stat-card {
+  background: var(--panel);
+  border: 1px solid #8f762e;
+  border-radius: 13px;
+  padding: 13px 5px;
+  text-align: center;
+}
+
+.stat-card span {
+  font-size: 23px;
+}
+
+.stat-card p {
+  color: var(--muted);
+  font-size: 11px;
+  margin: 8px 0;
+}
+
+.stat-card strong {
+  color: var(--gold2);
+  font-size: 16px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 11px;
+}
+
+.menu-card {
+  background: linear-gradient(145deg, #102d1e, #04140b);
+  border: 1px solid var(--gold);
+  border-radius: 13px;
+  min-height: 105px;
+  padding: 13px 8px;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  transition: .2s;
+}
+
+.menu-card:active {
+  transform: scale(.96);
+  background: #17482d;
+}
+
+.menu-card span {
+  font-size: 27px;
+}
+
+.menu-card b {
+  color: var(--gold2);
+  font-size: 14px;
+}
+
+.menu-card small {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.gold-banner {
+  margin-top: 20px;
+  padding: 17px;
+  border-radius: 14px;
+  border: 1px solid var(--gold2);
+  background: linear-gradient(110deg, #67430d, #d6a32c, #56380c);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+  text-align: center;
+  color: #fff7d8;
+}
+
+.gold-banner span {
+  font-size: 30px;
+}
+
+.gold-banner h3 {
+  font-size: 17px;
+}
+
+.gold-banner p {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.support {
+  width: 100%;
+  padding: 15px;
+  margin-top: 14px;
+  border-radius: 12px;
+  background: #062518;
+  border: 1px solid var(--green);
+  color: white;
+  font-size: 15px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px 5px 15px;
+  color: var(--muted);
+}
+
+.footer-logo {
+  color: var(--gold);
+  font-weight: bold;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+footer p {
+  font-size: 11px;
+  margin-bottom: 8px;
+}
+
+footer small {
+  font-size: 10px;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: #000c;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 10;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-box {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  background: linear-gradient(145deg, #0b2b1c, #020d08);
+  border: 1px solid var(--gold);
+  border-radius: 20px;
+  padding: 28px 20px;
+  text-align: center;
+  box-shadow: 0 0 35px #c79b3440;
+}
+
+.close {
+  position: absolute;
+  left: 14px;
+  top: 12px;
+  background: transparent;
+  border: 0;
+  color: white;
+  font-size: 20px;
+}
+
+.modal-icon {
+  color: var(--gold);
+  font-size: 35px;
+}
+
+.modal-box h2 {
+  color: var(--gold2);
+  font-size: 19px;
+  margin: 10px;
+}
+
+.modal-box p {
+  color: #c6d8cb;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.primary-button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 13px;
+  border: 1px solid var(--gold2);
+  border-radius: 11px;
+  color: #06140b;
+  background: linear-gradient(100deg, #b98a26, #ffe49a);
+  font-weight: bold;
+}
+
+#modalContent {
+  margin-top: 14px;
+  color: var(--gold2);
+  font-size: 13px;
+  line-height: 2;
+}
